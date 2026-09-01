@@ -1,0 +1,81 @@
+.image-lightbox {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .92);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeIn .2s ease;
+}
+
+.lightbox-toolbar {
+    position: absolute;
+
+    top: 24px;
+    left: 24px;
+    right: 24px;
+
+    display: flex;
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+.toolbar-left,
+.toolbar-center,
+.toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    flex: 1;
+}
+
+.toolbar-left {
+    justify-content: flex-start;
+}
+
+.toolbar-center {
+    justify-content: center;
+}
+
+.toolbar-right {
+    justify-content: flex-end;
+}
+
+.lightbox-toolbar button {
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,.12);
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: .2s;
+}
+
+.lightbox-toolbar button:hover {
+    background: rgba(255,255,255,.22);
+    transform: scale(1.08);
+}
+
+.lightbox-toolbar svg {
+    width: 22px;
+    height: 22px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}

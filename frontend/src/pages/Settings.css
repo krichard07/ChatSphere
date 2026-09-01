@@ -1,0 +1,397 @@
+.settings-page {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            color-mix(
+                in srgb,
+                var(--accent-primary) 30%,
+                transparent
+            ),
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(59, 130, 246, .30),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            var(--bg-primary),
+            var(--bg-secondary),
+            var(--bg-tertiary)
+        );
+}
+
+.settings-card {
+    width: min(620px, 100%);
+
+    padding: 36px;
+
+    box-sizing: border-box;
+
+    border-radius: 28px;
+
+    background:
+        linear-gradient(
+            180deg,
+            var(--glass-bg-strong),
+            var(--glass-bg)
+        );
+
+    border: 1px solid var(--glass-border);
+
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.55),
+        inset 0 -1px 0 rgba(255, 255, 255, 0.12),
+        0 22px 55px var(--shadow-primary);
+
+    backdrop-filter: blur(32px) saturate(135%);
+        -webkit-backdrop-filter: blur(32px) saturate(135%);
+
+    color: var(--text-primary);
+}
+
+
+.settings-header {
+    margin: 20px 0 30px;
+}
+
+
+.settings-header h1 {
+    margin: 0 0 8px;
+
+    font-size: 30px;
+}
+
+
+.settings-header p {
+    margin: 0;
+
+    color: var(--text-secondary);
+
+    font-size: 14px;
+}
+
+
+.settings-sections {
+    display: flex;
+    flex-direction: column;
+
+    gap: 14px;
+}
+
+
+.settings-section {
+    padding: 18px 20px;
+
+    border-radius: 18px;
+
+    background:
+        var(--glass-bg);
+
+    border:
+        1px solid var(--glass-border);
+
+    backdrop-filter: blur(22px) saturate(125%);
+        -webkit-backdrop-filter: blur(22px) saturate(125%);
+
+    box-shadow:
+        inset 0 1px 1px rgba(255, 255, 255, 0.42),
+        0 8px 22px rgba(70, 78, 110, 0.10);
+}
+
+
+.settings-section h2 {
+    margin: 0 0 6px;
+
+    font-size: 16px;
+}
+
+
+.settings-section p {
+    margin: 0;
+
+    color: var(--text-muted);
+
+    font-size: 13px;
+}
+
+
+.settings-back-btn {
+    width: 100%;
+
+    margin-top: 24px;
+    padding: 14px;
+
+    border: 1px solid var(--glass-border);
+    border-radius: 15px;
+
+    background:
+        var(--glass-bg);
+
+    color: var(--text-primary);
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        background .2s ease;
+}
+
+
+.settings-back-btn:hover {
+    transform: translateY(-1px);
+
+    background:
+        var(--glass-bg-strong);
+}
+
+/* =========================================================
+   SETTINGS SECTION HEADER
+========================================================= */
+
+.settings-section-header {
+    margin-bottom: 16px;
+}
+
+
+.settings-section-header h2 {
+    margin: 0 0 6px;
+
+    font-size: 16px;
+}
+
+
+.settings-section-header p {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   SETTINGS ROW
+========================================================= */
+
+.settings-row {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 22px;
+
+    padding-top: 14px;
+
+    border-top:
+        1px solid
+        rgba(255, 255, 255, .07);
+}
+
+
+.settings-row-info {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+
+.settings-row-title {
+    color: var(--text-primary);
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.settings-row-description {
+    color:
+        var(--text-muted);
+
+    font-size: 12px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   GLASS TOGGLE
+========================================================= */
+
+.settings-toggle {
+    position: relative;
+
+    width: 48px;
+    height: 28px;
+
+    flex: 0 0 48px;
+
+    padding: 0;
+
+    border:
+        1px solid
+        var(--glass-border);
+
+    border-radius: 999px;
+
+    background:
+        var(--glass-bg);
+
+    cursor: pointer;
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    box-shadow:
+        inset 0 1px 1px
+        rgba(255, 255, 255, .10);
+
+    transition:
+        background .22s ease,
+        border-color .22s ease;
+}
+
+
+.settings-toggle-knob {
+    position: absolute;
+
+    top: 4px;
+    left: 4px;
+
+    width: 18px;
+    height: 18px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, .72);
+
+    box-shadow:
+        0 3px 8px
+        rgba(0, 0, 0, .25);
+
+    transition:
+        transform .22s ease,
+        background .22s ease;
+}
+
+
+.settings-toggle.active {
+    background:
+        var(--glass-bg-strong);
+
+    border-color:
+        var(--accent-primary);
+}
+
+
+.settings-toggle.active
+.settings-toggle-knob {
+    transform:
+        translateX(20px);
+
+    background: white;
+}
+
+
+/* =========================================================
+   COMING SOON
+========================================================= */
+
+.settings-coming-soon {
+    padding-top: 14px;
+
+    border-top:
+        1px solid
+        var(--glass-border);
+
+    color:
+        var(--text-muted);
+
+    font-size: 12px;
+}
+
+.settings-theme-options {
+    display: flex;
+
+    gap: 8px;
+
+    flex-shrink: 0;
+}
+
+
+.settings-theme-btn {
+    padding: 8px 12px;
+
+    border:
+        1px solid
+        var(--glass-border);
+
+    border-radius: 12px;
+
+    background:
+        var(--glass-bg);
+
+    color:
+        var(--text-secondary);
+
+    cursor: pointer;
+
+    transition:
+        background .2s ease,
+        color .2s ease,
+        border-color .2s ease,
+        transform .2s ease;
+}
+
+
+.settings-theme-btn:hover {
+    transform: translateY(-1px);
+
+    background:
+        var(--glass-bg-strong);
+
+    color:
+        var(--text-primary);
+}
+
+
+.settings-theme-btn.active {
+    background:
+        var(--glass-bg-strong);
+
+    color:
+        var(--text-primary);
+
+    border-color:
+        var(--accent-primary);
+}
+
+.settings-card,
+.settings-section,
+.settings-back-btn,
+.settings-theme-btn,
+.settings-toggle {
+    transition:
+        background .25s ease,
+        color .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+}

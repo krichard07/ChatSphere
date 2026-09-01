@@ -1,0 +1,40 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+venv/
+.venv/
+env/
+.env
+.env.*
+!.env.example
+
+# Django
+*.log
+db.sqlite3
+media/
+staticfiles/
+
+# Node / React
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# React build
+build/
+dist/
+
+# IDE
+.vscode/
+.idea/
+
+# OS / editor
+*.swp
+*.swo
+
+.git_backup_local/

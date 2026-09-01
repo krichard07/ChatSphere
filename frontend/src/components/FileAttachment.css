@@ -1,0 +1,133 @@
+.file-attachment{
+    display:flex;
+    align-items:center;
+    gap:14px;
+
+    padding:12px 14px;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,.06);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    margin-top:8px;
+
+    min-width:280px;
+
+    backdrop-filter:blur(10px);
+}
+
+.file-icon{
+    width:42px;
+    height:42px;
+
+    border-radius:12px;
+
+    background:rgba(255,255,255,.08);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    flex-shrink:0;
+}
+
+.file-icon svg{
+    width:24px;
+    height:24px;
+}
+
+.file-info{
+    flex:1;
+    overflow:hidden;
+}
+
+.file-name{
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+
+    font-weight:600;
+}
+
+.file-download{
+
+    width:38px;
+    height:38px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:transparent;
+
+    color:white;
+
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transition:.2s;
+}
+
+.file-download:hover{
+
+    background:rgba(255,255,255,.10);
+
+}
+
+.file-download svg{
+
+    width:20px;
+    height:20px;
+
+}
+
+.file-type{
+
+    margin-top:2px;
+
+    font-size:12px;
+
+    opacity:.65;
+
+}
+
+.file-preview{
+
+    width:38px;
+    height:38px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:transparent;
+
+    color:white;
+
+    cursor:pointer;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    transition:.2s;
+
+}
+
+.file-preview:hover{
+
+    background:rgba(255,255,255,.10);
+
+}
+
+.file-preview svg{
+
+    width:20px;
+    height:20px;
+
+}

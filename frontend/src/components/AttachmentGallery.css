@@ -1,0 +1,135 @@
+.attachment-gallery {
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+/* ========================= */
+/* Egyetlen kép              */
+/* ========================= */
+
+.single-image {
+
+    display: block;
+
+    width: 130px;
+    height: 90px;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    cursor: pointer;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.18);
+
+    border: 1px solid rgba(255,255,255,.08);
+
+}
+
+.single-image:hover {
+
+    transform: none
+
+}
+
+/* ========================= */
+/* Több kép (Stack)          */
+/* ========================= */
+
+.image-stack {
+
+    position: relative;
+
+    width: 142px;
+    height: 102px;
+
+    cursor: pointer;
+
+}
+
+/* közös stílus */
+
+.stack-front,
+.stack-back-1,
+.stack-back-2 {
+
+    position: absolute;
+
+    width: 130px;
+    height: 90px;
+
+    object-fit: cover;
+
+    border-radius: 16px;
+
+    border: 1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 3px 10px rgba(0,0,0,.18);
+
+}
+
+/* hátsó */
+
+.stack-back-2 {
+
+    top: 8px;
+    left: 8px;
+
+    opacity: .30;
+
+    z-index: 1;
+
+}
+
+/* középső */
+
+.stack-back-1 {
+
+    top: 4px;
+    left: 4px;
+
+    opacity: .55;
+
+    z-index: 2;
+
+}
+
+/* első */
+
+.stack-front {
+
+    top: 0;
+    left: 0;
+
+    z-index: 3;
+
+}
+
+/* hover */
+
+.image-stack:hover .stack-front {
+
+    transform: translate(-2px,-2px);
+
+}
+
+.image-stack:hover .stack-back-1 {
+
+    transform: translate(2px,2px);
+
+}
+
+.image-stack:hover .stack-back-2 {
+
+    transform: translate(4px,4px);
+
+}

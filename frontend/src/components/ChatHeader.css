@@ -1,0 +1,381 @@
+.chat-header {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 26px 32px 20px;
+
+    background: transparent;
+
+    backdrop-filter: none;
+
+    border-bottom:
+        1px solid var(--glass-border);
+}
+
+
+.chat-header-left {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+}
+
+
+.chat-header-left h2 {
+    color: var(--text-primary);
+
+    font-size: 26px;
+
+    font-weight: 700;
+}
+
+
+.channel-description {
+    color: var(--text-muted);
+
+    font-size: 13px;
+
+    font-weight: 500;
+}
+
+
+.chat-header-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+.channel-info {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 8px;
+
+    font-size: 14px;
+
+    color: var(--text-muted);
+}
+
+
+.channel-divider {
+    color: var(--text-muted);
+}
+
+
+.channel-count {
+    color: var(--text-secondary);
+
+    font-weight: 500;
+}
+
+
+.channel-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    font-size: 30px;
+
+    font-weight: 700;
+
+    letter-spacing: -.5px;
+
+    color: var(--text-primary);
+}
+
+
+.channel-title svg {
+    font-size: 26px;
+
+    color: var(--accent-primary);
+
+    flex-shrink: 0;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.chat-search {
+    padding: 16px 32px;
+
+    border-bottom:
+        1px solid var(--glass-border);
+
+    animation:
+        searchOpen
+        .22s
+        ease;
+}
+
+
+.chat-search input {
+    width: 100%;
+
+    height: 46px;
+
+    padding: 0 18px;
+
+    outline: none;
+
+    color: var(--text-primary);
+
+    font-size: 15px;
+
+    border-radius: 16px;
+
+    border:
+        1px solid var(--glass-border);
+
+    background:
+        var(--glass-bg);
+
+    backdrop-filter:
+        blur(30px);
+
+    -webkit-backdrop-filter:
+        blur(30px);
+
+    box-shadow:
+        inset 0 1px 1px
+        rgba(255,255,255,.10);
+
+    transition:
+        background .2s ease,
+        border-color .2s ease,
+        color .2s ease;
+}
+
+
+.chat-search input:focus {
+    background:
+        var(--glass-bg-strong);
+
+    border-color:
+        var(--accent-primary);
+}
+
+
+.chat-search input::placeholder {
+    color: var(--text-muted);
+}
+
+
+@keyframes searchOpen {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+
+}
+
+/* =========================================================
+   HEADER MENU
+========================================================= */
+
+.header-menu-wrapper {
+    position: relative;
+}
+
+
+.header-context-menu {
+    position: absolute;
+
+    top: calc(100% + 12px);
+
+    right: 0;
+
+    z-index: 1000;
+
+    width: 220px;
+
+    padding: 8px;
+
+    border: 1px solid var(--glass-border);
+
+    border-radius: 18px;
+
+    background:
+        color-mix(
+            in srgb,
+            var(--bg-secondary) 62%,
+            transparent
+        );
+
+    backdrop-filter:
+        blur(28px)
+        saturate(140%);
+
+    -webkit-backdrop-filter:
+        blur(28px)
+        saturate(140%);
+
+    box-shadow:
+        inset 0 1px 1px
+        rgba(255,255,255,.16),
+
+        0 18px 45px
+        var(--shadow-primary);
+
+    animation:
+        headerMenuAppear
+        .16s ease;
+}
+
+
+.header-menu-item {
+    width: 100%;
+
+    min-height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 0 12px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background: transparent;
+
+    color: var(--text-secondary);
+
+    font-size: 14px;
+
+    font-weight: 500;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition:
+        background .18s ease,
+        color .18s ease,
+        transform .18s ease;
+}
+
+
+.header-menu-item:hover {
+    background:
+        var(--glass-bg-strong);
+
+    color:
+        var(--text-primary);
+}
+
+
+.header-menu-item:active {
+    transform:
+        scale(.98);
+}
+
+
+.header-menu-item svg {
+    width: 17px;
+
+    height: 17px;
+
+    flex-shrink: 0;
+}
+
+
+.header-menu-divider {
+    height: 1px;
+
+    margin: 6px 8px;
+
+    background:
+        var(--glass-border);
+}
+
+
+.header-menu-warning {
+    color:
+        #e3b45c;
+}
+
+
+.header-menu-warning:hover {
+    background:
+        rgba(227,180,92,.10);
+
+    color:
+        #f0c66d;
+}
+
+
+.header-menu-danger {
+    color:
+        #ef6b73;
+}
+
+
+.header-menu-danger:hover {
+    background:
+        rgba(239,68,68,.10);
+
+    color:
+        #ff7d85;
+}
+
+
+/* =========================================================
+   DISABLED HEADER BUTTON
+========================================================= */
+
+.glass-btn:disabled {
+    opacity: .35;
+
+    cursor: default;
+
+    pointer-events: none;
+
+    transform: none;
+}
+
+
+@keyframes headerMenuAppear {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateY(-6px)
+            scale(.98);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}

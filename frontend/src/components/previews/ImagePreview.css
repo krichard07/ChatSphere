@@ -1,0 +1,78 @@
+.image-preview-viewport {
+    width: 90vw;
+    height: calc(90vh - 120px);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    user-select: none;
+}
+
+.image-preview-image {
+    max-width: 70vw;
+    max-height: calc(90vh - 120px);
+
+    border-radius: 12px;
+
+    transition: transform .2s ease;
+    transform-origin: center center;
+}
+
+.lightbox-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    width: 54px;
+    height: 54px;
+
+    border: none;
+    border-radius: 50%;
+
+    background: rgba(255,255,255,.12);
+    color: white;
+
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .2s;
+}
+
+.lightbox-arrow:hover {
+    background: rgba(255,255,255,.22);
+}
+
+.lightbox-arrow svg {
+    width: 30px;
+    height: 30px;
+}
+
+.lightbox-arrow.left {
+    left: 24px;
+}
+
+.lightbox-arrow.right {
+    right: 24px;
+}
+
+.lightbox-counter {
+    position: absolute;
+    bottom: 24px;
+
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    background: rgba(255,255,255,.1);
+
+    padding: 8px 14px;
+
+    border-radius: 999px;
+}
