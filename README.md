@@ -17,6 +17,40 @@ The project provides real-time communication, user authentication, file and medi
 - Message replies
 - Message reactions
 
+## Screenshots
+
+### Main Chat
+
+Real-time messaging interface with text and voice messages.
+
+![Main Chat](screenshots/Chat.png)
+
+### File and Media Sharing
+
+File attachments, document sharing and image previews directly in the conversation.
+
+![File and Media Sharing](screenshots/File-Sharing.png)
+
+### Authentication
+
+Login interface with both dark and light theme support.
+
+![Login - Dark Mode](screenshots/Login-Dark.png)
+
+![Login - Light Mode](screenshots/Login-Light.png)
+
+### User Profile
+
+User profile with account information, online status and profile management.
+
+![User Profile](screenshots/Profile.png)
+
+### Settings
+
+Application preferences including theme selection and messaging settings.
+
+![Settings](screenshots/Settings.png)
+
 ## Tech Stack
 
 ### Backend
